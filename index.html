@@ -10,16 +10,16 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0b1622; colo
 
 /* NAV */
 .nav { position: sticky; top: 0; z-index: 50; background: rgba(11,22,34,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.07); }
-.nav-inner { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 0; overflow-x: auto; padding: 0 16px; }
+.nav-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; overflow-x: auto; padding: 0 16px; gap: 0; }
 .nav-logo { font-size: 11px; font-weight: 800; letter-spacing: 3px; color: #00B0B9; text-transform: uppercase; padding: 16px 20px 16px 0; border-right: 1px solid rgba(255,255,255,0.07); margin-right: 8px; white-space: nowrap; flex-shrink: 0; }
-.nav-btn { background: none; border: none; color: #667; font-size: 12px; font-weight: 600; padding: 16px 14px; cursor: pointer; white-space: nowrap; flex-shrink: 0; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: inherit; letter-spacing: 0.3px; }
+.nav-btn { background: none; border: none; color: #667; font-size: 12px; font-weight: 600; padding: 16px 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: inherit; }
 .nav-btn:hover { color: #aac; }
 .nav-btn.active { color: #00B0B9; border-bottom-color: #00B0B9; }
 
 /* HERO */
-.hero { position: relative; height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; }
+.hero { position: relative; height: 290px; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; }
 .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,22,34,0.2) 0%, rgba(11,22,34,0.75) 100%); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,22,34,0.2), rgba(11,22,34,0.75)); }
 .hero-content { position: relative; z-index: 1; text-align: center; padding: 0 24px; }
 .hero-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #00B0B9; margin-bottom: 12px; }
 .hero-title { font-size: 38px; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
@@ -29,91 +29,128 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0b1622; colo
 /* PAGES */
 .page { display: none; }
 .page.active { display: block; }
-.page-wrap { max-width: 860px; margin: 0 auto; padding: 36px 24px 80px; }
-.page-wrap.wide { max-width: 980px; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 36px 24px 80px; }
 
 /* SECTION HEADER */
-.section-header { margin-bottom: 32px; }
-.section-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #00B0B9; margin-bottom: 10px; }
-.section-title { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
-.section-intro { font-size: 14px; color: #7a9aa0; line-height: 1.7; max-width: 640px; }
+.sec-eye { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #00B0B9; margin-bottom: 10px; }
+.sec-title { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.sec-intro { font-size: 14px; color: #7a9aa0; line-height: 1.7; max-width: 660px; margin-bottom: 32px; }
 
 /* TIMELINE */
-.timeline-wrap { position: relative; }
+.tl { position: relative; }
 .tl-line { position: absolute; left: 58px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #00B0B944, transparent); }
 .row { display: flex; align-items: flex-start; margin-bottom: 13px; }
-.row.break-row { margin-bottom: 5px; opacity: 0.5; }
-.time-col { width: 50px; flex-shrink: 0; padding-top: 14px; text-align: right; }
-.time-label { font-size: 11px; color: #00B0B9; font-weight: 700; }
-.dot-col { width: 20px; flex-shrink: 0; display: flex; justify-content: center; padding-top: 17px; }
+.row.br { margin-bottom: 5px; opacity: 0.5; }
+.tc { width: 50px; flex-shrink: 0; padding-top: 14px; text-align: right; }
+.tl { position: relative; }
+.tlabel { font-size: 11px; color: #00B0B9; font-weight: 700; }
+.dc { width: 20px; flex-shrink: 0; display: flex; justify-content: center; padding-top: 17px; }
 .dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.1); flex-shrink: 0; }
 .dot.sm { width: 7px; height: 7px; background: #2a3a44; border: none; margin-top: 3px; }
 .card { flex: 1; margin-left: 14px; background: linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)); border: 1px solid rgba(255,255,255,0.07); border-radius: 11px; padding: 14px 18px; cursor: pointer; transition: all 0.2s; }
 .card:hover { background: rgba(255,255,255,0.08); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
-.break-lbl { flex: 1; margin-left: 14px; font-size: 12px; color: #3a4a55; padding-top: 4px; }
-.card-row { display: flex; justify-content: space-between; align-items: flex-start; }
-.card-title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
-.card-icon { font-size: 18px; }
-.card-title { font-size: 15px; font-weight: 700; }
-.dur-badge { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 700; }
-.card-spk { font-size: 11px; color: #7ab0b8; margin-bottom: 3px; }
-.card-tag { font-size: 10px; color: #445; text-transform: uppercase; letter-spacing: 1px; }
-.arrow { font-size: 18px; color: #2a3a44; margin-left: 6px; }
+.br-lbl { flex: 1; margin-left: 14px; font-size: 12px; color: #3a4a55; padding-top: 4px; }
+.cr { display: flex; justify-content: space-between; align-items: flex-start; }
+.ctr { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+.ci { font-size: 18px; }
+.ct { font-size: 15px; font-weight: 700; }
+.db { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 700; }
+.cs { font-size: 11px; color: #7ab0b8; margin-bottom: 3px; }
+.ctag { font-size: 10px; color: #445; text-transform: uppercase; letter-spacing: 1px; }
+.arr { font-size: 18px; color: #2a3a44; margin-left: 6px; }
 
-/* CASE STUDY */
-.case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-bottom: 32px; }
-.case-card { background: linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 22px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
+/* SPLIT BREAKOUT */
+.split-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 14px 16px; margin-top: 10px; }
+.split-title { font-size: 11px; color: #00B0B9; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 10px; }
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.split-col { background: rgba(0,176,185,0.06); border-radius: 8px; padding: 10px 12px; }
+.split-col-title { font-size: 11px; font-weight: 700; color: #00B0B9; margin-bottom: 6px; }
+.split-item { font-size: 11px; color: #8ab8bc; margin-bottom: 4px; line-height: 1.5; }
+.split-item span { color: #c0d8dc; font-weight: 600; }
+.mod-box { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px 14px; margin-top: 10px; }
+.mod-title { font-size: 10px; color: #556; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.mod-names { font-size: 11px; color: #7a9aa0; line-height: 1.7; }
+
+/* CASE CARDS */
+.case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px; }
+.case-card { background: linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
 .case-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.5); background: rgba(255,255,255,0.08); }
-.case-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; font-weight: 700; }
-.case-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
-.case-subtitle { font-size: 12px; color: #7a9aa0; margin-bottom: 14px; line-height: 1.5; }
-.case-meta { display: flex; gap: 10px; flex-wrap: wrap; }
-.case-pill { font-size: 10px; padding: 3px 10px; border-radius: 20px; background: rgba(255,255,255,0.06); color: #889; }
-.case-arrow { position: absolute; bottom: 20px; right: 20px; font-size: 22px; color: #2a3a44; }
+.case-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+.case-title { font-size: 19px; font-weight: 800; margin-bottom: 5px; }
+.case-sub { font-size: 12px; color: #7a9aa0; margin-bottom: 12px; line-height: 1.5; }
+.case-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.pill { font-size: 10px; padding: 3px 10px; border-radius: 20px; background: rgba(255,255,255,0.06); color: #889; }
+.case-arr { position: absolute; bottom: 18px; right: 18px; font-size: 20px; color: #2a3a44; }
 
 /* CASE DETAIL */
 .case-detail { display: none; }
 .case-detail.open { display: block; }
 .back-btn { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #aac; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; margin-bottom: 24px; font-family: inherit; transition: background 0.2s; }
 .back-btn:hover { background: rgba(255,255,255,0.1); }
-.case-section { margin-bottom: 28px; }
-.case-h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-.case-body { font-size: 14px; color: #b0c8cc; line-height: 1.8; white-space: pre-line; }
-.timeline-event { background: rgba(255,255,255,0.04); border-left: 3px solid; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 12px; }
-.te-year { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-.te-body { font-size: 13px; color: #a0bcc0; line-height: 1.75; }
-.human-box { background: rgba(0,176,185,0.07); border: 1px solid rgba(0,176,185,0.2); border-radius: 10px; padding: 18px 20px; margin-bottom: 12px; }
-.human-box-title { font-size: 12px; font-weight: 700; color: #00B0B9; margin-bottom: 6px; }
-.human-box-body { font-size: 13px; color: #a0bcc0; line-height: 1.7; }
-.q-item { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; font-size: 13px; color: #b0c8cc; line-height: 1.65; }
-.q-num { font-weight: 700; color: #00B0B9; margin-right: 6px; }
+.ch2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.cbody { font-size: 14px; color: #b0c8cc; line-height: 1.8; white-space: pre-line; }
+.te { border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 10px; }
+.te-y { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+.te-b { font-size: 13px; color: #a0bcc0; line-height: 1.75; }
+.hbox { background: rgba(0,176,185,0.07); border: 1px solid rgba(0,176,185,0.2); border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; }
+.hbox-t { font-size: 12px; font-weight: 700; color: #00B0B9; margin-bottom: 5px; }
+.hbox-b { font-size: 13px; color: #a0bcc0; line-height: 1.7; }
+.qi { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; font-size: 13px; color: #b0c8cc; line-height: 1.65; }
+.qn { font-weight: 700; color: #00B0B9; margin-right: 5px; }
 
-/* OPTION PAGES */
-.opt-block { background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015)); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 28px; margin-bottom: 24px; }
-.opt-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #00B0B9; margin-bottom: 8px; font-weight: 700; }
-.opt-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
-.opt-fac { font-size: 11px; color: #556; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
-.opt-body { font-size: 14px; color: #b0c8cc; line-height: 1.8; white-space: pre-line; margin-bottom: 16px; }
-.purpose-box { background: rgba(0,176,185,0.07); border-left: 3px solid #00B0B9; border-radius: 0 8px 8px 0; padding: 14px 18px; }
-.purpose-label { font-size: 10px; color: #00B0B9; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700; }
-.purpose-body { font-size: 13px; color: #a0c4c8; line-height: 1.65; }
-.prov-card { background: rgba(255,255,255,0.04); border-radius: 12px; padding: 22px; margin-bottom: 18px; border: 1px solid rgba(255,255,255,0.06); }
-.prov-num { font-size: 32px; font-weight: 900; color: rgba(0,176,185,0.25); margin-bottom: 8px; }
-.prov-title { font-size: 18px; font-weight: 800; margin-bottom: 10px; }
-.prov-stat { font-size: 12px; font-weight: 700; color: #00B0B9; background: rgba(0,176,185,0.1); padding: 5px 12px; border-radius: 6px; display: inline-block; margin-bottom: 12px; }
-.prov-body { font-size: 13px; color: #9ab8bc; line-height: 1.75; margin-bottom: 14px; }
-.prov-q { font-size: 14px; font-style: italic; color: #d0e8ec; border-left: 3px solid #00B0B9; padding-left: 14px; margin-bottom: 14px; }
-.disc-qs { margin-top: 10px; }
-.disc-q { font-size: 12px; color: #7a9aa0; margin-bottom: 6px; padding-left: 14px; border-left: 2px solid rgba(255,255,255,0.08); line-height: 1.6; }
+/* OPTION BLOCKS */
+.opt-block { background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015)); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 26px; margin-bottom: 22px; }
+.opt-eye { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #00B0B9; margin-bottom: 8px; font-weight: 700; }
+.opt-title { font-size: 22px; font-weight: 800; margin-bottom: 5px; }
+.opt-fac { font-size: 11px; color: #445; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+.opt-body { font-size: 14px; color: #b0c8cc; line-height: 1.8; white-space: pre-line; margin-bottom: 14px; }
+.pur-box { border-radius: 0 8px 8px 0; padding: 13px 17px; }
+.pur-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700; }
+.pur-txt { font-size: 13px; color: #a0c4c8; line-height: 1.65; }
+.prov-card { background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.06); }
+.prov-num { font-size: 30px; font-weight: 900; color: rgba(0,176,185,0.2); margin-bottom: 6px; }
+.prov-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+.prov-stat { font-size: 11px; font-weight: 700; color: #00B0B9; background: rgba(0,176,185,0.1); padding: 4px 11px; border-radius: 6px; display: inline-block; margin-bottom: 10px; }
+.prov-body { font-size: 13px; color: #9ab8bc; line-height: 1.75; margin-bottom: 12px; }
+.prov-q { font-size: 14px; font-style: italic; color: #d0e8ec; border-left: 3px solid #00B0B9; padding-left: 14px; margin-bottom: 12px; }
+.disc-q { font-size: 12px; color: #7a9aa0; margin-bottom: 5px; padding-left: 12px; border-left: 2px solid rgba(255,255,255,0.08); line-height: 1.6; }
+
+/* AI PROGRAMME PAGE */
+.prog-header { background: linear-gradient(135deg, rgba(0,176,185,0.08), rgba(0,176,185,0.02)); border: 1px solid rgba(0,176,185,0.15); border-radius: 16px; padding: 28px; margin-bottom: 32px; }
+.prog-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #00B0B9; margin-bottom: 10px; }
+.prog-title { font-size: 26px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
+.prog-sub { font-size: 14px; color: #8ab8bc; line-height: 1.75; margin-bottom: 20px; }
+.success-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.success-item { background: rgba(0,176,185,0.07); border-radius: 10px; padding: 14px 16px; }
+.success-metric { font-size: 20px; font-weight: 800; color: #00B0B9; margin-bottom: 4px; }
+.success-label { font-size: 11px; color: #6a9aa0; line-height: 1.5; }
+.init-card { background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015)); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 26px; margin-bottom: 20px; cursor: pointer; transition: all 0.2s; }
+.init-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+.init-num { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+.init-headline { font-size: 11px; font-style: italic; margin-bottom: 10px; }
+.init-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+.init-owner { font-size: 11px; color: #445; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+.init-desc { font-size: 13px; color: #9ab8bc; line-height: 1.75; margin-bottom: 14px; white-space: pre-line; }
+.success-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.s-pill { font-size: 11px; background: rgba(0,176,185,0.08); border: 1px solid rgba(0,176,185,0.2); color: #6ab8bc; padding: 4px 12px; border-radius: 20px; }
+.comm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
+.comm-item { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 13px 15px; }
+.comm-name { font-size: 12px; font-weight: 700; color: #c0d8dc; margin-bottom: 6px; }
+.comm-ex { font-size: 11px; color: #6a8a90; line-height: 1.6; }
+.exco-box { background: rgba(200,169,81,0.07); border: 1px solid rgba(200,169,81,0.2); border-radius: 14px; padding: 22px; margin-top: 28px; }
+.exco-title { font-size: 16px; font-weight: 700; color: #c8a951; margin-bottom: 14px; }
+.exco-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+.exco-n { font-size: 13px; font-weight: 700; color: #c8a951; flex-shrink: 0; }
+.exco-t { font-size: 13px; color: #b0a070; line-height: 1.6; }
 
 /* MODAL */
 .modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
 .modal-bg.open { display: flex; }
-.modal { background: linear-gradient(160deg, #0f2035, #081420); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; max-width: 660px; width: 100%; max-height: 88vh; overflow-y: auto; position: relative; }
-.modal-strip { height: 120px; background-size: cover; background-position: center; border-radius: 16px 16px 0 0; opacity: 0.15; position: absolute; top: 0; left: 0; right: 0; pointer-events: none; }
-.modal-body { position: relative; z-index: 1; padding: 32px; }
-.modal-close { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,0.08); border: none; color: #fff; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px; z-index: 10; font-family: inherit; transition: background 0.2s; }
-.modal-close:hover { background: rgba(255,255,255,0.15); }
+.modal { background: linear-gradient(160deg, #0f2035, #081420); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; max-width: 680px; width: 100%; max-height: 88vh; overflow-y: auto; position: relative; }
+.modal-strip { height: 110px; background-size: cover; background-position: center; border-radius: 16px 16px 0 0; opacity: 0.15; position: absolute; top: 0; left: 0; right: 0; pointer-events: none; }
+.mbody { position: relative; z-index: 1; padding: 30px; }
+.mclose { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,0.08); border: none; color: #fff; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px; z-index: 10; font-family: inherit; }
+.mclose:hover { background: rgba(255,255,255,0.15); }
 .m-eye { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
 .m-title { font-size: 24px; font-weight: 800; margin-bottom: 6px; line-height: 1.2; }
 .m-spk { font-size: 13px; color: #7ab8bc; margin-bottom: 4px; }
@@ -122,120 +159,105 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0b1622; colo
 .m-pur { border-radius: 0 8px 8px 0; padding: 12px 16px; }
 .m-pur-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700; }
 .m-pur-txt { font-size: 13px; color: #a8c8cc; line-height: 1.65; }
-.opt-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.opt-tabs { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
 .opt-tab { padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #556; cursor: pointer; font-size: 12px; font-weight: 700; transition: all 0.2s; font-family: inherit; }
 .opt-tab.active { border-color: #00B0B9; background: rgba(0,176,185,0.12); color: #00B0B9; }
 .modal::-webkit-scrollbar { width: 4px; }
 .modal::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
 
 /* FOOTER */
-.footer { max-width: 860px; margin: 0 auto; padding: 20px 24px 50px; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer { max-width: 880px; margin: 0 auto; padding: 20px 24px 50px; border-top: 1px solid rgba(255,255,255,0.05); }
 .footer-txt { font-size: 10px; color: #2a3a44; letter-spacing: 1px; text-transform: uppercase; line-height: 2; text-align: center; }
 
 @media(max-width:600px) {
   .hero-title { font-size: 26px; }
-  .case-grid { grid-template-columns: 1fr; }
+  .case-grid, .comm-grid, .success-grid { grid-template-columns: 1fr; }
+  .split-grid { grid-template-columns: 1fr; }
   .nav-btn { font-size: 11px; padding: 14px 10px; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-logo">VLD 2026</div>
-    <button class="nav-btn active" onclick="showPage('agenda')">📋 Agenda</button>
-    <button class="nav-btn" onclick="showPage('cases')">💥 Case Studies</button>
-    <button class="nav-btn" onclick="showPage('resilience')">🛡️ AI Resilience</button>
-    <button class="nav-btn" onclick="showPage('humanedge')">🧠 Human Edge</button>
+    <button class="nav-btn active" onclick="showPage('agenda',this)">📋 Agenda</button>
+    <button class="nav-btn" onclick="showPage('cases',this)">💥 Case Studies</button>
+    <button class="nav-btn" onclick="showPage('resilience',this)">🛡️ AI Resilience</button>
+    <button class="nav-btn" onclick="showPage('humanedge',this)">🧠 Human Edge</button>
+    <button class="nav-btn" onclick="showPage('programme',this)">🚀 AI Programme</button>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <img class="hero-img" src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=1600&q=80" alt="Copenhagen"/>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Verdane · Copenhagen · 25 March 2026</div>
+    <div class="hero-eyebrow">Verdane · Copenhagen · 24 March 2026</div>
     <div class="hero-title">Leadership Day 2026</div>
     <div class="hero-sub">"Decisions Under Pressure"</div>
     <div class="hero-venue">Square 1 & 2 · Villa Copenhagen</div>
   </div>
 </div>
 
-<!-- ═══════════════ PAGE: AGENDA ═══════════════ -->
+<!-- ══ AGENDA ══ -->
 <div id="page-agenda" class="page active">
-  <div class="page-wrap">
-    <div class="section-header">
-      <div class="section-eyebrow">25 March 2026 · Full Day</div>
-      <div class="section-title">Day Agenda</div>
-      <div class="section-intro">Click any session to read the full description and intended purpose.</div>
-    </div>
-    <div class="timeline-wrap">
+  <div class="wrap">
+    <div class="sec-eye">25 March 2026 · Full Day</div>
+    <div class="sec-title">Day Agenda</div>
+    <div class="sec-intro">Click any session to read the full description and intended purpose.</div>
+    <div style="position:relative;">
       <div class="tl-line"></div>
       <div id="timeline"></div>
     </div>
   </div>
   <div class="footer">
-    <div class="footer-txt">Facilitation team: Ellen Nyhus · Caroline Ohlsson · Niklas Savander · Sascha Alber · Daniel Hansen · Erik Nordlie · Mike Anjard-Hummel · Kristofer Gravning · Nikolaj Hamann · Ellen Köhler · BonsaiLabs</div>
+    <div class="footer-txt">Facilitation team: Ellen Nyhus · Caroline Ohlsson · Niklas Savander · Sascha Alber · Nils Vold · Pål · Daniel Hansen · Erik Nordlie · Mike Anjard-Hummel · Morten Reinhardtsen · Ellen Köhler · Kristofer Gravning · Nikolaj Hamann · BonsaiLabs</div>
   </div>
 </div>
 
-<!-- ═══════════════ PAGE: CASE STUDIES ═══════════════ -->
+<!-- ══ CASES ══ -->
 <div id="page-cases" class="page">
-  <div class="page-wrap">
-    <!-- List view -->
+  <div class="wrap">
     <div id="cases-list">
-      <div class="section-header">
-        <div class="section-eyebrow">Breakout Option B</div>
-        <div class="section-title">"Crushed by the Wave"</div>
-        <div class="section-intro">Three fictional post-mortem case studies set in 2028. Companies that failed to navigate AI disruption. You are the leadership team — looking back, what went wrong, and what would you do differently? Click a case to read in full.</div>
-      </div>
+      <div class="sec-eye">Breakout Option B</div>
+      <div class="sec-title">"Crushed by the Wave"</div>
+      <div class="sec-intro">Three fictional post-mortem case studies set in 2028. You are the leadership team — looking back from failure, what went wrong and what would you do differently?</div>
       <div class="case-grid">
         <div class="case-card" onclick="openCase(0)" style="border-top:3px solid #00B0B9;">
           <div class="case-tag" style="color:#00B0B9;">B2C · Online Retail</div>
           <div class="case-title">NordicHome Group</div>
-          <div class="case-subtitle">A well-loved Scandinavian home & lifestyle retailer. €180m revenue in 2024. In administration by 2028.</div>
-          <div class="case-meta">
-            <span class="case-pill">Consumer</span><span class="case-pill">E-commerce</span><span class="case-pill">Brand</span>
-          </div>
-          <div class="case-arrow">›</div>
+          <div class="case-sub">€180m revenue in 2024. In administration by 2028.</div>
+          <div class="case-pills"><span class="pill">Consumer</span><span class="pill">E-commerce</span></div>
+          <div class="case-arr">›</div>
         </div>
         <div class="case-card" onclick="openCase(1)" style="border-top:3px solid #c87a30;">
           <div class="case-tag" style="color:#c87a30;">B2B · SaaS</div>
           <div class="case-title">Fieldworx AS</div>
-          <div class="case-subtitle">Nordic workforce management SaaS, €28m ARR, 320 customers. Sold at 60% discount to 2024 valuation.</div>
-          <div class="case-meta">
-            <span class="case-pill">SaaS</span><span class="case-pill">B2B</span><span class="case-pill">Construction</span>
-          </div>
-          <div class="case-arrow">›</div>
+          <div class="case-sub">€28m ARR, 320 customers. Sold at 60% discount to 2024 valuation.</div>
+          <div class="case-pills"><span class="pill">SaaS</span><span class="pill">B2B</span></div>
+          <div class="case-arr">›</div>
         </div>
         <div class="case-card" onclick="openCase(2)" style="border-top:3px solid #4a9a60;">
           <div class="case-tag" style="color:#4a9a60;">Decarb · Services</div>
           <div class="case-title">ClearVolt Energy</div>
-          <div class="case-subtitle">European energy efficiency & building decarbonisation services. €45m revenue. Acquired at 45% discount.</div>
-          <div class="case-meta">
-            <span class="case-pill">CleanTech</span><span class="case-pill">Services</span><span class="case-pill">B2B</span>
-          </div>
-          <div class="case-arrow">›</div>
+          <div class="case-sub">€45m revenue. Acquired at 45% discount to 2024 value.</div>
+          <div class="case-pills"><span class="pill">CleanTech</span><span class="pill">Services</span></div>
+          <div class="case-arr">›</div>
         </div>
       </div>
       <div class="opt-block" style="border-left:3px solid #c87a30;">
-        <div class="opt-label">Session Format</div>
+        <div class="opt-eye">Session Format · 75 min</div>
         <div class="opt-title">How to Run This Session</div>
-        <div class="opt-fac">Caroline + Sascha · Both tracks separately · 75 min</div>
-        <div class="opt-body">Groups of 5–6 are pre-assigned by sector relevance. 10 minutes silent reading, then 40 minutes group discussion using the printed discussion questions. Closes with a 15-minute share-back and 10 minutes of individual written commitments.
-
-The post-mortem format creates psychological safety: it is easier to be honest about bad decisions when they are "someone else's." The bridge question — "what is the equivalent in your own business?" — is where the real value lies.</div>
-        <div class="purpose-box">
-          <div class="purpose-label">Intended Purpose</div>
-          <div class="purpose-body">Make the AI disruption threat visceral and personal through story. Participants identify the real leadership and governance decision points — then bridge the lessons directly to their own company. Closes with individual written commitments.</div>
+        <div class="opt-fac">Caroline + Sascha · Both tracks separately</div>
+        <div class="opt-body">Groups of 5–6 pre-assigned by sector. 10 min silent reading → 40 min group discussion → 15 min share-back → 10 min individual written commitments. The post-mortem format creates psychological safety — it's easier to be honest about bad decisions when they're "someone else's." The bridge question ("what is the equivalent in your own business?") is where the real value lies.</div>
+        <div class="pur-box" style="background:rgba(200,122,48,0.08);border-left:3px solid #c87a30;">
+          <div class="pur-lbl" style="color:#c87a30;">Intended Purpose</div>
+          <div class="pur-txt">Make AI disruption visceral and personal through story. Bridge fictional failure directly to real leadership decisions and individual commitments.</div>
         </div>
       </div>
     </div>
-
-    <!-- Case detail view -->
     <div id="case-detail" class="case-detail">
       <button class="back-btn" onclick="closeCase()">← Back to Case Studies</button>
       <div id="case-content"></div>
@@ -243,176 +265,268 @@ The post-mortem format creates psychological safety: it is easier to be honest a
   </div>
 </div>
 
-<!-- ═══════════════ PAGE: RESILIENCE ═══════════════ -->
+<!-- ══ RESILIENCE ══ -->
 <div id="page-resilience" class="page">
-  <div class="page-wrap">
-    <div class="section-header">
-      <div class="section-eyebrow">Breakout Option A</div>
-      <div class="section-title">AI Resilience Scoring</div>
-      <div class="section-intro">Participants score their own company against Verdane's proprietary AI Resilience Framework and identify their single biggest vulnerability. A practical, structured starting point for real leadership decisions.</div>
-    </div>
-
+  <div class="wrap">
+    <div class="sec-eye">Breakout Option A</div>
+    <div class="sec-title">AI Resilience Scoring</div>
+    <div class="sec-intro">Participants score their own company against Verdane's proprietary AI Resilience Framework and identify their single biggest vulnerability. Practical, structured, and grounded in real portfolio data.</div>
     <div class="opt-block">
-      <div class="opt-label">Purpose & Format</div>
-      <div class="opt-title">Why This Session</div>
-      <div class="opt-fac">CEO track: Ellen + Caroline · COB track: Niklas + Sascha · 75 min</div>
-      <div class="opt-body">Every CEO and COB leaves with an honest, structured view of where their company stands on AI resilience — not as a theoretical exercise, but as a practical starting point for leadership decisions.
-
-The session uses Verdane's proprietary AI Resilience Framework, scored on a 1–8 scale. Tier 1 contains three yes/no structural moat questions. If any Tier 1 answer is YES, the company is highly resilient (score 7–8). Tier 2 scores five supporting moats on the same 1–8 scale.</div>
-      <div class="purpose-box">
-        <div class="purpose-label">Intended Purpose</div>
-        <div class="purpose-body">Give every leader an honest baseline. A low score isn't a verdict — it's a starting point. The session surfaces the one structural action each company should prioritise, and creates individual written commitments that Verdane follows up on within two weeks.</div>
-      </div>
-    </div>
-
-    <div class="opt-block">
-      <div class="opt-label">The Framework</div>
-      <div class="opt-title">Tier 1 — Structural Moats</div>
-      <div class="opt-fac">Yes / No questions — if any YES, company scores 7–8 / 8</div>
+      <div class="opt-eye">The Framework</div>
+      <div class="opt-title">Tier 1 — Structural Moats (Yes/No)</div>
+      <div class="opt-fac">If any YES → company scores 7–8 / 8</div>
       <div class="opt-body">T1.1 — Is value delivered through integrated and proprietary hardware AND software?
 T1.2 — Does the company benefit from strong network effects?
-T1.3 — Does the company deliver differentiated physical product value that AI cannot bypass with software alone?
-
-A single Tier 1 YES indicates strong structural AI resilience. The company's core value delivery cannot be replicated by an AI-native competitor without years of capital investment.</div>
+T1.3 — Does the company deliver differentiated physical product value that AI cannot bypass with software alone?</div>
     </div>
-
     <div class="opt-block">
-      <div class="opt-label">The Framework</div>
-      <div class="opt-title">Tier 2 — Supporting Moats</div>
-      <div class="opt-fac">Scored 1–8 each · two or more at 7+ indicates strong resilience</div>
+      <div class="opt-eye">The Framework</div>
+      <div class="opt-title">Tier 2 — Supporting Moats (scored 1–8)</div>
+      <div class="opt-fac">Two or more at 7+ indicates strong resilience</div>
       <div class="opt-body">T2.1 — Does the product create an audit trail regulators and auditors rely on?
 T2.2 — Does the product encode expertise that takes years to build?
 T2.3 — Is the product the system of record?
 T2.4 — Would operations stop without this product?
-T2.5 — Does the company have a strong brand and a direct contractual relationship with its customers?
+T2.5 — Does the company have a strong brand and a direct contractual relationship with customers?
 
 Score interpretation:
-• 7–8 / 8 — Structurally resilient. AI is more opportunity than threat in the near term.
-• 5–6 / 8 — Moderate resilience. Some protection but active AI strategy needed now.
-• 1–4 / 8 — Vulnerable. Immediate action required on both defence and offence.</div>
+• 7–8 / 8 — Structurally resilient. AI is more opportunity than threat.
+• 5–6 / 8 — Moderate. Some protection but active strategy needed now.
+• 1–4 / 8 — Vulnerable. Immediate action required on defence and offence.</div>
     </div>
-
     <div class="opt-block">
-      <div class="opt-label">Session Structure · 75 minutes</div>
+      <div class="opt-eye">Session Structure · 75 min</div>
       <div class="opt-title">How the Session Runs</div>
-      <div class="opt-body">Introduction (10 min) — Facilitator intro, hand out printed scorecards, explain the two tiers. Key framing: "There is no right answer. A low score isn't a verdict — it's a starting point."
+      <div class="opt-fac">CEO track: Ellen + Caroline · COB track: Niklas + Sascha</div>
+      <div class="opt-body">Introduction (10 min) — Hand out scorecards, explain two tiers. Key framing: "A low score isn't a verdict — it's a starting point."
 
-Individual self-scoring (10 min) — Each participant scores their company in silence across all 8 dimensions.
+Individual self-scoring (10 min) — Each participant scores their company silently across all 8 dimensions.
 
-Small group discussion (40 min) — Groups of 4–5, pre-mixed across sectors. Three questions:
-1. Share your score and the one dimension you found hardest to answer — why?
+Small group discussion (40 min) — Groups of 4–5, pre-mixed across sectors:
+1. Share your score and the dimension you found hardest to answer — why?
 2. Where in your business is AI most likely to create value in the next 12 months?
-3. What is the one structural thing you could do to improve your resilience score over the next 2 years?
+3. What is the one structural thing you could do to improve your resilience score in 2 years?
 
-Share-back (10 min) — 2–3 groups share key insights. Facilitator draws out patterns.
+Share-back (10 min) — 2–3 groups share key insights.
 
-Individual call to action (5 min) — Each participant writes: "The one thing I will do in my company as a result of today."</div>
-      <div class="purpose-box">
-        <div class="purpose-label">COB Track Note</div>
-        <div class="purpose-body">For COBs, redirect discussion question 3 to: "What governance or board-level decision does your score suggest you should be having?" The question is less about operational action and more about asking the CEO the right questions.</div>
+Individual call to action (5 min) — Each writes: "The one thing I will do in my company as a result of today."</div>
+      <div class="pur-box" style="background:rgba(0,176,185,0.07);border-left:3px solid #00B0B9;">
+        <div class="pur-lbl" style="color:#00B0B9;">COB Track Note</div>
+        <div class="pur-txt">For COBs, redirect discussion question 3 to: "What governance or board-level decision does your score suggest you should be having?" Less about operational action, more about asking the CEO the right questions.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ PAGE: HUMAN EDGE ═══════════════ -->
+<!-- ══ HUMAN EDGE ══ -->
 <div id="page-humanedge" class="page">
-  <div class="page-wrap">
-    <div class="section-header">
-      <div class="section-eyebrow">Breakout Option C</div>
-      <div class="section-title">The Human Edge</div>
-      <div class="section-intro">What will still be human at the top? When AI handles the analysis, the data, and the strategy — what is your irreplaceable leadership contribution? Erik Salvador opens with a short keynote, then three provocations drive group discussion.</div>
-    </div>
-
+  <div class="wrap">
+    <div class="sec-eye">Breakout Option C</div>
+    <div class="sec-title">The Human Edge</div>
+    <div class="sec-intro">What will still be human at the top? Erik Salvador opens with a short keynote, then three sharp provocations drive honest group discussion.</div>
     <div class="opt-block">
-      <div class="opt-label">Session Format</div>
+      <div class="opt-eye">Session Format · 75 min</div>
       <div class="opt-title">How This Session Runs</div>
-      <div class="opt-fac">Erik Salvador · CEO & COB tracks together · 75 min</div>
+      <div class="opt-fac">Erik Salvador · CEO & COB tracks together</div>
       <div class="opt-body">Erik opens with a 10–15 minute keynote drawing on McKinsey, BCG, Deloitte and Harvard research to frame the central question: when AI democratises analytical capacity, what makes a leader irreplaceable?
 
-This flows directly into three sharp provocations discussed in groups of 5–6. Each provocation has a research stat to anchor it, a core question, and discussion prompts. No slides for the discussion — just the provocation cards and honest conversation.
+Three sharp provocations are then discussed in groups of 5–6. Each has a research stat, a core question, and discussion prompts. No slides for the discussion — just the provocation cards and honest conversation.
 
 Closes with a room-wide share-back and individual written commitments: "The one thing I will do differently as a leader in the next 30 days."</div>
-      <div class="purpose-box">
-        <div class="purpose-label">Intended Purpose</div>
-        <div class="purpose-body">Make the AI disruption debate personal. Not "what should our company do" — but "what does this mean for me, as a leader, right now?" This session works especially well after the hackathon: participants have just built something with AI, and now the question shifts from "what can AI do?" to "what does that mean for how I lead?"</div>
+      <div class="pur-box" style="background:rgba(0,176,185,0.07);border-left:3px solid #00B0B9;">
+        <div class="pur-lbl" style="color:#00B0B9;">Intended Purpose</div>
+        <div class="pur-txt">Make the disruption debate personal — not "what should our company do" but "what does this mean for me, as a leader, right now?" Works especially well after the hackathon: participants have just built something with AI, and now the question shifts to what that means for how they lead.</div>
       </div>
     </div>
-
     <div class="prov-card">
       <div class="prov-num">01</div>
       <div class="prov-title">Your leadership advantage just became available to everyone.</div>
-      <div class="prov-stat">92% of companies plan to increase AI investment. Only 1% consider themselves truly ready. — McKinsey</div>
-      <div class="prov-body">AI democratises analytical capacity. The data, the market insight, the strategic analysis that used to make the best leaders stand out — AI now gives that to everyone. CEOs and CTOs already drive 44.5% of all AI decisions in their organisations. The bottleneck is not technology. It is leadership.</div>
+      <div class="prov-stat">92% plan to increase AI investment. Only 1% consider themselves truly ready. — McKinsey</div>
+      <div class="prov-body">AI democratises analytical capacity. The data, market insight, and strategic analysis that used to make the best leaders stand out — AI now gives that to everyone. CEOs and CTOs already drive 44.5% of all AI decisions. The bottleneck is not technology. It is leadership.</div>
       <div class="prov-q">"What does your leadership team offer that AI cannot replicate — and are you all agreed on the answer?"</div>
-      <div class="disc-qs">
-        <div class="disc-q">What is the one thing you personally bring to your organisation that AI genuinely cannot substitute?</div>
-        <div class="disc-q">Is your leadership team aligned on this — or does everyone have a different answer?</div>
-        <div class="disc-q">What does your answer mean for how you spend your time?</div>
-      </div>
+      <div class="disc-q">What is the one thing you personally bring that AI genuinely cannot substitute?</div>
+      <div class="disc-q">Is your leadership team aligned on this — or does everyone have a different answer?</div>
+      <div class="disc-q">What does your answer mean for how you spend your time?</div>
     </div>
-
     <div class="prov-card">
       <div class="prov-num">02</div>
       <div class="prov-title">Your organisation is using AI. Your frontline isn't.</div>
       <div class="prov-stat">75% of senior leaders use AI weekly. Only 51% of frontline employees do. — BCG "Silicon Ceiling"</div>
-      <div class="prov-body">When employees lack approved tools, 54% find alternatives on their own — creating security risks and chaos. Positive attitudes toward AI jump from 15% to 55% when leaders actively endorse it. Frontline managers are 3× more worried about AI than senior leaders. What looks like resistance is usually a leadership gap: unclear communication, lack of psychological safety, no sense of purpose in the change.</div>
+      <div class="prov-body">When employees lack approved tools, 54% find alternatives on their own — creating security risk. Positive AI attitudes jump from 15% to 55% when leaders actively endorse it. Frontline managers are 3× more worried about AI than senior leaders. What looks like resistance is usually a leadership gap.</div>
       <div class="prov-q">"Are you personally leading AI transformation — or delegating it and hoping it happens?"</div>
-      <div class="disc-qs">
-        <div class="disc-q">What is the gap between how you use AI and how your team uses it?</div>
-        <div class="disc-q">What would it take for your frontline managers to feel excited rather than threatened?</div>
-        <div class="disc-q">What have you personally stopped doing because AI does it better — and have you been honest about that with your team?</div>
-      </div>
+      <div class="disc-q">What is the gap between how you use AI and how your team uses it?</div>
+      <div class="disc-q">What would it take for your frontline managers to feel excited rather than threatened?</div>
+      <div class="disc-q">What have you personally stopped doing because AI does it better — and have you told your team?</div>
     </div>
-
     <div class="prov-card">
       <div class="prov-num">03</div>
       <div class="prov-title">Would you let an AI represent you in a board meeting?</div>
       <div class="prov-stat">Only 1 in 5 companies has mature governance for autonomous AI agents. — Deloitte 2026</div>
-      <div class="prov-body">Digital "agentic twins" — autonomous AI that acts on your behalf — are no longer science fiction. They are here. Nearly half of Fortune 100 companies now mention AI risk in board oversight reports — a 3× increase in one year. 136 AI-related laws were passed across US states in 2025 alone. The question is not whether AI will act on your behalf. It already does. The question is how far you are willing to let it go — and who is accountable when it gets it wrong.</div>
+      <div class="prov-body">Digital "agentic twins" — autonomous AI acting on your behalf — are here. Nearly half of Fortune 100 companies now mention AI risk in board oversight reports — a 3× increase in one year. The question is not whether AI will act on your behalf. It already does. The question is how far you are willing to let it go.</div>
       <div class="prov-q">"Where is your personal boundary — and does your board know where the company's boundary is?"</div>
-      <div class="disc-qs">
-        <div class="disc-q">Where in your organisation are AI agents already making decisions — and do you know where all of them are?</div>
-        <div class="disc-q">What is on your board agenda about AI governance — and is it enough?</div>
-        <div class="disc-q">If your AI made a decision that harmed a customer or employee, who is responsible?</div>
-      </div>
+      <div class="disc-q">Where in your organisation are AI agents already making decisions — do you know where all of them are?</div>
+      <div class="disc-q">What is on your board agenda about AI governance — and is it enough?</div>
+      <div class="disc-q">If your AI made a decision that harmed a customer or employee, who is responsible?</div>
     </div>
-
     <div class="opt-block" style="border-left:3px solid #00B0B9;">
-      <div class="opt-label">The Underlying Question · Harvard Business School</div>
+      <div class="opt-eye">Closing Question · Harvard Business School</div>
       <div class="opt-title">Change Fitness</div>
-      <div class="opt-body">HBS defines "change fitness" as the capacity to absorb significant and sustained change. They argue it is the meta-skill that determines whether leaders and organisations succeed or stagnate.
-
-The minimum bar: every leader needs at least a 30% digital and AI mindset — not technical expertise, but genuine curiosity and willingness to engage.
-
-Warning: when AI takes over tasks that gave people meaning, work risks becoming less meaningful. Leaders must shift from optimising processes to designing them.</div>
-      <div class="purpose-box">
-        <div class="purpose-label">Closing Question for the Room</div>
-        <div class="purpose-body">"On a scale of 1–10 — honestly — how change-fit are you as a leader right now? Not your company. You. And what does your organisation need from you in the next 12 months that only a human can provide?"</div>
+      <div class="opt-body">HBS defines "change fitness" as the capacity to absorb significant and sustained change — the meta-skill that determines whether leaders and organisations succeed or stagnate. Minimum bar: every leader needs at least a 30% digital and AI mindset. Warning: when AI takes over tasks that gave people meaning, work risks becoming less meaningful. Leaders must shift from optimising processes to designing them.</div>
+      <div class="pur-box" style="background:rgba(0,176,185,0.07);border-left:3px solid #00B0B9;">
+        <div class="pur-lbl" style="color:#00B0B9;">Closing Question for the Room</div>
+        <div class="pur-txt">"On a scale of 1–10 — honestly — how change-fit are you as a leader right now? Not your company. You. And what does your organisation need from you in the next 12 months that only a human can provide?"</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MODAL (agenda) -->
+<!-- ══ AI PROGRAMME ══ -->
+<div id="page-programme" class="page">
+  <div class="wrap">
+    <div class="sec-eye">Elevate · 2026 Strategic Priority</div>
+    <div class="sec-title">AI Acceleration Programme</div>
+    <div class="sec-intro">Presented to Exco — March 2026. Elevate's portfolio-wide programme to accelerate AI adoption, build AI-ready leaders, and position Verdane as the AI-enabling owner.</div>
+
+    <div class="prog-header">
+      <div class="prog-eyebrow">Programme Headline</div>
+      <div class="prog-title">"Ahead of the curve: building AI-ready companies and leaders across the Verdane portfolio"</div>
+      <div class="prog-sub">AI is Elevate's #1 priority in 2026 — not as a theme, but as a measurable, resourced programme. The five initiatives below form a coherent system: we map where every company stands, build ongoing peer learning across communities, deploy targeted SWAT support for priority companies, upskill individual leaders personally, and ensure HR is ahead of — not behind — the workforce transformation AI will trigger.</div>
+      <div class="prog-eyebrow" style="margin-top:20px;margin-bottom:12px;">What Success Looks Like by End of 2026</div>
+      <div class="success-grid">
+        <div class="success-item"><div class="success-metric">100%</div><div class="success-label">Portfolio companies with completed AI Resilience assessment</div></div>
+        <div class="success-item"><div class="success-metric">>60%</div><div class="success-label">Portfolio companies with at least one AI initiative in active execution</div></div>
+        <div class="success-item"><div class="success-metric">6–10</div><div class="success-label">SWAT engagements completed with documented value impact</div></div>
+        <div class="success-item"><div class="success-metric">>24</div><div class="success-label">Community AI learning sessions delivered across all communities</div></div>
+        <div class="success-item"><div class="success-metric">>20</div><div class="success-label">CEOs & COBs enrolled in personal AI coaching by end of Q2</div></div>
+        <div class="success-item"><div class="success-metric">>70</div><div class="success-label">Elevate NPS on AI support from CEO/COB survey</div></div>
+        <div class="success-item"><div class="success-metric">3+</div><div class="success-label">Documented AI lighthouse cases with measurable value impact</div></div>
+        <div class="success-item"><div class="success-metric">✓</div><div class="success-label">AI featured as differentiator in Investor Day narrative</div></div>
+      </div>
+    </div>
+
+    <!-- Initiative 1 -->
+    <div class="init-card" style="border-left:3px solid #00B0B9;">
+      <div class="init-num" style="color:#00B0B9;">Initiative 1</div>
+      <div class="init-headline" style="color:#6ab8bc;">"You can't prioritise what you haven't measured."</div>
+      <div class="init-title">AI Resilience Mapping — Know Where Every Company Stands</div>
+      <div class="init-owner">Owner: Sascha Alber + Elevate AI team + IP per company · Q1–Q2 2026</div>
+      <div class="init-desc">Using Verdane's proprietary AI Resilience Framework (Tier 1 structural moats + Tier 2 supporting moats, scored 1–8), Elevate conducts a structured assessment for each portfolio company. Combines internal DD data with IP input. Output is a one-page scorecard per company and a portfolio-wide heat map that allows Elevate and IPs to see at a glance which companies are most exposed.
+
+Already piloted on PremiumXL, Momox, Corlytics and Stratsys. Rolled out to full portfolio in Q1–Q2 2026.</div>
+      <div class="success-pills">
+        <span class="s-pill">100% portfolio scored</span>
+        <span class="s-pill">Heat map live in portfolio reviews</span>
+        <span class="s-pill">5+ companies take concrete action from score</span>
+        <span class="s-pill">Referenced in LP materials</span>
+      </div>
+    </div>
+
+    <!-- Initiative 2 -->
+    <div class="init-card" style="border-left:3px solid #4a7aaa;">
+      <div class="init-num" style="color:#4a9adc;">Initiative 2</div>
+      <div class="init-headline" style="color:#5a8aac;">"The fastest way to learn is from a peer who did it last month."</div>
+      <div class="init-title">AI Community Learning Sessions — Peer Knowledge Across the Portfolio</div>
+      <div class="init-owner">Owner: Caroline Ohlsson + Elevate functional IPs · Launch April 2026</div>
+      <div class="init-desc">Bi-weekly or monthly sessions run within each Elevate community, facilitated by Elevate with input from portco peers or external guests. Short (45–60 min), practical and peer-led where possible. Announced at Leadership Day, beginning April 2026.</div>
+      <div class="comm-grid">
+        <div class="comm-item"><div class="comm-name">👔 CEO Community</div><div class="comm-ex">How other CEOs are using AI to reclaim time · What does an AI-ready leadership team look like?</div></div>
+        <div class="comm-item"><div class="comm-name">🏛️ COB Community</div><div class="comm-ex">AI governance — what should be on your board agenda · How to evaluate AI risk and ask the right CEO questions</div></div>
+        <div class="comm-item"><div class="comm-name">📈 GTM (B2C)</div><div class="comm-ex">AI in customer acquisition and personalisation · What's working in e-commerce and consumer</div></div>
+        <div class="comm-item"><div class="comm-name">🤝 GTM (B2B)</div><div class="comm-ex">AI in sales and customer success · Using agents to scale without adding headcount</div></div>
+        <div class="comm-item"><div class="comm-name">💻 Product & Tech</div><div class="comm-ex">Building agentic AI into your product · How leading portcos are restructuring R&D around AI</div></div>
+        <div class="comm-item"><div class="comm-name">💰 Finance</div><div class="comm-ex">AI in FP&A and cash flow forecasting · Automating financial operations — where the ROI is highest</div></div>
+        <div class="comm-item"><div class="comm-name">👥 Talent & HR</div><div class="comm-ex">AI and workforce planning — the honest conversation · Redesigning roles, not just reducing headcount · Leading transformation without losing people · AI in recruiting and performance management</div></div>
+        <div class="comm-item"><div class="comm-name">🔐 Cyber</div><div class="comm-ex">AI as both threat and tool · What your security posture needs to look like in 2026</div></div>
+      </div>
+      <div class="success-pills" style="margin-top:14px;">
+        <span class="s-pill">Min. 24 sessions delivered</span>
+        <span class="s-pill">Avg. session NPS >65</span>
+        <span class="s-pill">50%+ portcos represented</span>
+        <span class="s-pill">5+ cross-company use cases from sessions</span>
+      </div>
+    </div>
+
+    <!-- Initiative 3 -->
+    <div class="init-card" style="border-left:3px solid #c87a30;">
+      <div class="init-num" style="color:#c87a30;">Initiative 3</div>
+      <div class="init-headline" style="color:#a06028;">"For the companies where speed matters most, we don't just advise — we build alongside."</div>
+      <div class="init-title">AI SWAT Programme — Targeted Build Support for Priority Companies</div>
+      <div class="init-owner">Owner: Caroline Ohlsson + Sascha Alber + IP per company · First cohort April 2026</div>
+      <div class="init-desc">Intensive 6–10 week SWAT engagement per priority company covering: (1) use case identification and prioritisation; (2) hands-on build of 1–2 high-priority AI tools or workflows; (3) embed — ensuring the internal team can maintain and scale without external dependency. Companies selected jointly by Elevate and IPs based on the AI Resilience Map.
+
+Primary partner: BonsaiLabs (Csongor Barabasi, London) — senior ML/AI engineers and product leaders, proven PE portfolio focus, positive track record with Verdane portcos in light-touch workshops. Framework agreement recommended for portfolio-wide pricing. Note: BonsaiLabs strongest in B2B/SaaS. Additional partners needed for B2C and industrial — Netlight and Datatonic already known to Elevate.</div>
+      <div class="success-pills">
+        <span class="s-pill">6–10 SWAT engagements completed</span>
+        <span class="s-pill">Every engagement = 1 live AI tool in production</span>
+        <span class="s-pill">3+ lighthouse case studies documented</span>
+        <span class="s-pill">Framework agreement with BonsaiLabs in place</span>
+      </div>
+    </div>
+
+    <!-- Initiative 4 -->
+    <div class="init-card" style="border-left:3px solid #4a9a60;">
+      <div class="init-num" style="color:#4a9a60;">Initiative 4</div>
+      <div class="init-headline" style="color:#3a7a50;">"Our framework becomes a market signal — Verdane as the AI-enabling owner."</div>
+      <div class="init-title">AI Resilience Framework — External Positioning</div>
+      <div class="init-owner">Owner: Sascha Alber + Ellen Nyhus · Internal Q1 / External packaging Q2 2026</div>
+      <div class="init-desc">The internally developed AI Resilience Framework — already live and piloted — is packaged as a credible, shareable tool. Portfolio companies use it in their own board conversations. IPs use it in new investment assessments. Verdane references it in LP communications and Investor Day. A clean one-pager version is created for external use.</div>
+      <div class="success-pills">
+        <span class="s-pill">Featured at Investor Day</span>
+        <span class="s-pill">10+ portcos use it in board conversations</span>
+        <span class="s-pill">Standard in all new DD processes</span>
+        <span class="s-pill">1+ external reference citation</span>
+      </div>
+    </div>
+
+    <!-- Initiative 5 -->
+    <div class="init-card" style="border-left:3px solid #9a6aaa;">
+      <div class="init-num" style="color:#9a6aaa;">Initiative 5</div>
+      <div class="init-headline" style="color:#7a4a8a;">"You cannot lead a transformation you don't understand from the inside."</div>
+      <div class="init-title">Personal AI Coaching — "Your AI PT"</div>
+      <div class="init-owner">Owner: Ellen Nyhus + Caroline Ohlsson + Talent team · Survey sent week after Leadership Day</div>
+      <div class="init-desc">Inspired by the CEO of Swedish grocery chain ICA, who recently set up a personal AI coach with biweekly check-ins to upskill on how to use AI in his own work. Research is clear: positive AI attitudes jump from 15% to 55% when leaders personally engage and model it.
+
+Following Leadership Day, Verdane surveys CEOs and COBs to identify who wants personal AI coaching. Elevate matches them with an AI coach — from within the Elevate/partner network, or via top Nordic and DACH university AI programmes (students get real-world exposure, leaders get hands-on support). Biweekly sessions, 45–60 min, structured around the leader's own priorities and company context. 3–6 month programme per participant.
+
+Coaching also covers the workforce transformation dimension — structured support on how to lead AI-driven workforce change, how to plan for headcount and role redesign proactively, how to bring HR into the process before it becomes a crisis, and how to communicate with the organisation honestly and with care.</div>
+      <div class="success-pills">
+        <span class="s-pill">>20 CEOs/COBs enrolled by end Q2</span>
+        <span class="s-pill">>70% increase personal AI usage after 3 months</span>
+        <span class="s-pill">10+ companies with formal AI workforce plan</span>
+        <span class="s-pill">3+ participants share journey at community event</span>
+      </div>
+    </div>
+
+    <!-- Exco asks -->
+    <div class="exco-box">
+      <div class="exco-title">🏛️ What We Need from Exco</div>
+      <div class="exco-item"><div class="exco-n">1.</div><div class="exco-t"><strong>Strategic direction:</strong> Confirm the five-initiative programme structure and alignment on approach — top-down targeted projects alongside bottom-up community ownership.</div></div>
+      <div class="exco-item"><div class="exco-n">2.</div><div class="exco-t"><strong>Resource investment:</strong> AI acceleration requires approx. 25–35% of Elevate AI team time in H1, reducing as community rhythms self-sustain in H2. Are we willing to invest this — including non-billable time?</div></div>
+      <div class="exco-item"><div class="exco-n">3.</div><div class="exco-t"><strong>Partner framework:</strong> Approve BonsaiLabs as primary SWAT partner for B2B/SaaS portcos. Mandate a partner panel approach for B2C and industrial segments.</div></div>
+      <div class="exco-item"><div class="exco-n">4.</div><div class="exco-t"><strong>First SWAT cohort:</strong> Select 2–3 pilot companies to begin April 2026.</div></div>
+      <div class="exco-item"><div class="exco-n">5.</div><div class="exco-t"><strong>Coaching programme:</strong> Confirm appetite to involve university partnerships for scale and cost efficiency.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
 <div class="modal-bg" id="modalBg" onclick="closeMBg(event)">
   <div class="modal" id="modal">
     <div class="modal-strip" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80')"></div>
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <div class="modal-body" id="modalBody"></div>
+    <button class="mclose" onclick="closeModal()">×</button>
+    <div class="mbody" id="modalBody"></div>
   </div>
 </div>
 
 <script>
 const TEAL="#00B0B9", DARK="#0f2a3f", GOLD="#c8a951";
 
-/* ── SESSIONS ── */
 const sessions=[
   {time:"09:00",dur:"10 min",title:"Welcome",icon:"👋",speakers:"Ellen Nyhus & Niklas Savander",tag:"Plenary · Square 1",color:TEAL,
    desc:"A warm, energising open from Ellen (CEO Verdane Elevate) and Niklas Savander (Verdane Advisory Board Member and lead of the COB community). Brief, human, and forward-looking — not a formal welcome, but a shared framing of why this day matters and what we want everyone to leave with.",
    purpose:"Set the tone. Signal that this is a working day, not a conference. Participants should leave with clarity, inspiration, and concrete commitments — not just good conversations."},
-  {time:"09:10",dur:"50 min",title:"State of AI: The Wave",icon:"🌊",speakers:"Bjarne Lie, Managing Partner Verdane",tag:"Plenary · Square 1",color:DARK,
-   desc:"Bjarne opens with urgency and optimism in equal measure. Three slides anchor the disruption reality: the wave (ride it or get crushed), real-world evidence of structural change (700 to 150 heads; a leading law firm's revenue from 2bn to 1bn), and the cost of waiting. He then pivots to the upside — portfolio examples (Voyado NRR & exit story, Urban Sports Club R&D transformation) and sector-specific data for the mix of businesses in the room. The AI Resilience Framework is briefly referenced as a Verdane-built tool.",
+  {time:"09:10",dur:"50 min",title:"Verdane Update & Framing of the Day",icon:"🌊",speakers:"Bjarne Lie, Managing Partner Verdane",tag:"Plenary · Square 1",color:DARK,
+   desc:"Bjarne opens with urgency and optimism in equal measure. Three slides anchor the disruption reality: the wave (ride it or get crushed), real-world evidence of structural change (700 to 150 heads; a leading law firm's revenue from 2bn to 1bn), and the cost of waiting. He then pivots to the upside — portfolio examples (Voyado NRR & exit story, Urban Sports Club R&D transformation) and sector-specific data for the mix of businesses in the room. The AI Resilience Framework is briefly referenced as a Verdane-built tool. He also frames the AI acceleration programme Elevate is launching as a direct result of today.",
    purpose:"Create both urgency and ambition. Leave the room thinking \"this is happening now — and we can do this.\" Set the intellectual and emotional frame for everything that follows."},
   {time:"10:00",dur:"25 min",title:"This Is What It Looks Like: CEOs on Stage",icon:"🎤",speakers:"2–3 portfolio CEOs · facilitated by Ellen Nyhus & Niklas Savander",tag:"Plenary · Square 1",color:"#1a7a80",
    desc:"Two or three CEOs from the room share their own AI journey in 5–7 minutes each — unscripted, honest, and peer-to-peer. Stories span the spectrum: a company that has moved fast with measurable results, and one earlier in the journey.\n\nSuggested candidates:\n• Erica Sandelin Ekelund (Voyado — proven results and exit story)\n• Carl von Eckermann (Natlink — deliberate early-stage start)\n• One further name TBC",
@@ -422,110 +536,75 @@ const sessions=[
    purpose:"Ground the morning's optimism in intellectual honesty. Equip leaders with the mental models to make better decisions alongside AI, not just faster decisions with it."},
   {time:"11:00",dur:"20 min",title:"Break — Coffee & Networking",icon:"☕",isBreak:true},
   {time:"11:20",dur:"70 min",title:"Lunch — Villa Copenhagen Restaurant",icon:"🍽️",isBreak:true},
-  {time:"12:30",dur:"90 min",title:"Hackathon: Build Your AI Tool",icon:"⚡",speakers:"CEO track: Caroline Ohlsson & Mike Anjard-Hummel · COB track: Sascha Alber & Morten Weicher",tag:"Breakout · Square 1 (CEOs) & Square 2 (COBs)",color:TEAL,
-   desc:"Participants build a real, working AI tool in Claude — hands-on, in groups of 4–5, with full facilitation and technical support. Opens with a live demo of what 'done' looks like.\n\n• CEO track: Build a \"Chief of Staff\" skill — a personalised AI agent handling a recurring task the CEO currently owns manually.\n• COB track: Build a \"Board Assistant\" — an AI tool helping prepare for or follow up from a board meeting.\n\nCloses with 2–3 groups sharing what they built and what surprised them.",
-   purpose:"Move from knowing about AI to having used it. Participants leave with a tangible, working artefact to take back and use immediately. Shifts the psychological relationship with AI from abstract threat to practical tool.",
-   isOptions:false},
+  {time:"12:30",dur:"3 hrs",title:"CEO & COB Breakout Sessions",icon:"⚡",speakers:"CEO track: Caroline Ohlsson & Mike Anjard-Hummel · COB track: Sascha Alber & Morten Reinhardtsen",tag:"Breakout · Square 1 (CEOs) & Square 2 (COBs)",color:TEAL,isSplit:true,
+   desc:"Three hours of structured, practical work split into two 90-minute blocks with a 15-minute break in between. To ensure sufficient hackathon moderators across both groups, the two tracks run in opposite order:\n\nGroup A starts with the Hackathon, then moves to their chosen Deep Dive option.\nGroup B starts with their chosen Deep Dive option, then moves to the Hackathon.\n\nThis allows the full hackathon moderation team to support Group A first, then Group B.",
+   purpose:"Move from knowing about AI to having used it — and from practical experience to strategic and personal reflection. Every participant leaves with a built AI tool AND a written personal commitment."},
   {time:"14:00",dur:"20 min",title:"Break — Coffee & Fresh Air",icon:"🌿",isBreak:true},
-  {time:"14:20",dur:"75 min",title:"Deep Dive Breakout — Three Options",icon:"🔍",speakers:"Ellen / Caroline / Erik Salvador · Sascha / Niklas",tag:"Breakout · Square 1 (CEOs) & Square 2 (COBs)",color:DARK,
-   desc:"One of three options selected in advance by the facilitation team. See the dedicated pages in this guide for full detail on each option.",
-   purpose:"Move from practical AI experience to strategic and personal reflection — connecting the hands-on morning to lasting leadership commitments.",
-   isOptions:true,
-   options:[
-     {label:"Option A",title:"AI Resilience Scoring",fac:"CEO track: Ellen + Caroline · COB track: Niklas + Sascha",
-      desc:"Participants score their own company against Verdane's AI Resilience Framework. Tier 1 structural moats (yes/no) and five Tier 2 supporting moats (scored 1–8). Group discussion in groups of 4–5. Closes with individual written commitments.\n\nSee the 'AI Resilience' page for full framework and session structure.",
-      purpose:"Give every CEO and COB an honest, structured view of where their company stands — not as a theoretical exercise, but as a practical starting point for leadership decisions."},
-     {label:"Option B",title:'"Crushed by the Wave" — Case Studies',fac:"Caroline + Sascha · Both tracks separately",
-      desc:"Three fictional post-mortem case studies set in 2028:\n• NordicHome (B2C online retail)\n• Fieldworx (B2B SaaS, workforce management)\n• ClearVolt (Decarb / energy efficiency)\n\nParticipants analyse what went wrong and bridge lessons to their own company.\n\nSee the 'Case Studies' page for full case texts and discussion questions.",
-      purpose:"Make the AI disruption threat visceral and personal through story. The post-mortem format creates psychological safety to discuss uncomfortable truths."},
-     {label:"Option C",title:"The Human Edge",fac:"Erik Salvador · CEO & COB tracks together",
-      desc:"Erik opens with a 10–15 min keynote, then three sharp provocations drive group discussion:\n1. Your leadership advantage just became available to everyone.\n2. Your organisation is using AI. Your frontline isn't.\n3. Would you let an AI represent you in a board meeting?\n\nSee the 'Human Edge' page for full provocation cards.",
-      purpose:"Make the disruption debate personal. Not 'what should our company do' but 'what does this mean for me, as a leader, right now?'"}
-   ]},
   {time:"15:35",dur:"50 min",title:"Closing Fireside: Decisions Under Pressure",icon:"🔥",speakers:"Jan-Ole Hesselberg · Erik Salvador · Bjarne Lie · facilitated by Ellen Nyhus & Niklas Savander",tag:"Plenary · Square 1",color:DARK,
-   desc:"The day closes with an unscripted fireside conversation between Jan-Ole, Erik, and Bjarne — three distinct perspectives on what AI means for leadership, organisations, and decision-making.\n\nEllen and Niklas open by inviting 2–3 participants to share the sharpest commitment or insight from their breakout — grounding the fireside in the real work of the afternoon before the conversation opens up.\n\nErik then joins Jan-Ole and Bjarne on stage. The floor is open for the audience to challenge and add. The conversation weaves together the threads of the day: the disruption reality Bjarne opened with, the human complexity Jan-Ole grounded, and the personal leadership dimension that ran through the breakouts.",
-   purpose:"Land the day's red thread — decisions under pressure — by modelling it live. Use the share-back from breakouts as the launch pad, so the fireside feels earned rather than performed. Send everyone into the evening energised, challenged, and ready to act."},
+   desc:"The day closes with an unscripted fireside conversation between Jan-Ole, Erik, and Bjarne — three distinct perspectives on what AI means for leadership, organisations, and decision-making.\n\nEllen and Niklas open by inviting 2–3 participants to share the sharpest commitment or insight from their breakout — grounding the fireside in the real work of the afternoon before the conversation opens up.\n\nErik then joins Jan-Ole and Bjarne on stage. The floor is open for the audience to challenge and add.",
+   purpose:"Land the day's red thread — decisions under pressure — by modelling it live. Use the share-back from breakouts as the launch pad so the fireside feels earned, not performed."},
   {time:"16:25",dur:"5 min",title:"Close",icon:"🎯",speakers:"Ellen Nyhus & Niklas Savander",tag:"Plenary · Square 1",color:TEAL,
    desc:"Ellen and Niklas close the formal day together — one voice from the CEO community, one from the COB community. A brief, warm, forward-looking close.",
    purpose:"Land cleanly with both communities represented. Leave the room on a high, together."},
   {time:"16:30",dur:"",title:"Free Time / Optional Run",icon:"🏃",isBreak:true},
-  {time:"18:30",dur:"30 min",title:"Aperitif",icon:"🥂",speakers:"TBD",tag:"Evening",color:GOLD,isEvening:true,
-   desc:"Drinks and informal mingling before dinner.",purpose:""},
-  {time:"19:00",dur:"3 hrs",title:"Dinner & Awards",icon:"🏆",speakers:"Square 1, Villa Copenhagen",tag:"Evening",color:GOLD,isEvening:true,
-   desc:"Dinner, celebration, and awards. Table conversation may be seeded with light provocations — TBC depending on energy and appetite after a full day.",purpose:""}
+  {time:"18:30",dur:"30 min",title:"Aperitif",icon:"🥂",speakers:"TBD",tag:"Evening",color:GOLD,isEvening:true,desc:"Drinks and informal mingling before dinner.",purpose:""},
+  {time:"19:00",dur:"3 hrs",title:"Dinner & Awards",icon:"🏆",speakers:"Square 1, Villa Copenhagen",tag:"Evening",color:GOLD,isEvening:true,desc:"Dinner, celebration, and awards. Table conversation may be seeded with light provocations — TBC depending on energy and appetite after a full day.",purpose:""}
 ];
 
-/* ── CASES ── */
 const cases=[
-  {
-    color:"#00B0B9", tag:"B2C · Online Retail",
-    title:"NordicHome Group",
-    subtitle:"How We Got Crushed by the Wave",
-    sector:"B2C | Online Home & Lifestyle Retail",
-    bg:"A well-loved Scandinavian online retailer of home interior, lifestyle, and garden products. Founded 2011. Grew to €180m revenue by 2024, selling across 18 European markets. Private equity-backed since 2021.\n\nBy early 2028, NordicHome was in administration. Revenue had collapsed from €180m to €94m in three years. The brand had become invisible. The team had shrunk from 280 to 90 people.",
-    timeline:[
-      {year:"2024 — Warning signs dismissed",body:"AI-native competitors began emerging across Europe offering hyper-personalised recommendations, dynamic pricing undercutting NordicHome by 8–15%, and AI-generated product photography reducing time-to-market from 6 weeks to 48 hours.\n\nThe NordicHome board discussed these at Q3. Consensus: \"These are startups. They don't have our brand, our supplier relationships, or our customer trust. We'll watch and see.\"\n\nThe board did not request a formal assessment of AI disruption risk."},
-      {year:"2025 — The data they didn't read",body:"NordicHome's marketplace rankings on Amazon began declining. A new algorithm prioritised listings with richer product data and faster fulfilment. AI-native competitors rose rapidly.\n\nThe company's webshop conversion rate dropped from 3.2% to 2.1% in 12 months. The analytics team flagged this. The marketing director attributed it to \"macro headwinds.\" The report sat unread by the CEO for six weeks.\n\nMeanwhile, a competitor launched an AI-powered room planner. NordicHome estimated building something similar: 18 months and €2m. The board approved a scaled-back version at €400k. Development began. It was never completed."},
-      {year:"2026 — The talent exodus",body:"The Head of Data resigned in January. His exit interview: \"We talk about data but we don't act on it. The strategy meeting where I showed the team we were losing market share in every age group under 45 — and nothing changed — that was the moment I knew.\"\n\nThree more senior product and tech people left within six months. The CEO reassured the board that talent turnover was \"an industry-wide challenge.\""},
-      {year:"2027 — The tipping point",body:"Amazon delisted two of NordicHome's top-selling categories from its recommended algorithm, citing insufficient product data quality. Revenue from Amazon — 38% of total sales — dropped 40% in a single quarter.\n\nThe interim CEO who took over described what she found: \"There was no data infrastructure. The customer database had not been updated since 2023. Nobody owned AI. The board had never formally discussed it as a strategic priority. They thought the brand would protect them.\"\n\nBy Q1 2028, the company entered administration."}
-    ],
-    human:[
-      {title:"The CEO's identity was the brand.",body:"He had built NordicHome on taste, curation, and relationships. AI felt like a threat to everything that made the company special. He avoided the topic because engaging with it meant confronting the possibility that what he'd built was becoming obsolete."},
-      {title:"The board asked the wrong questions.",body:"Every board meeting focused on revenue, EBITDA, and marketplace rankings. Nobody asked: \"What would our business look like if a well-funded AI-native competitor targeted our exact customer segment next year?\""},
-      {title:"The COO knew, but didn't act.",body:"She saw the data. She had the instinct. But she deferred to the CEO on strategy, and the culture rewarded loyalty over challenge. She later described it as \"the most expensive silence of my career.\""},
-      {title:"\"Watching and waiting\" felt responsible.",body:"The leadership team weren't reckless — they were cautious. But in a platform shift, caution is itself a decision. Waiting to see was the same as choosing not to move."}
-    ],
-    questions:["At what point did the leadership team have enough information to act — and what stopped them? Where were the real decision points?","What role did the board play — and what should they have done differently? What questions were never asked?","The COO saw the risk but stayed silent. What would have needed to be true — in terms of culture, process, or relationships — for her to have spoken up and been heard?","If you were the CEO of NordicHome in January 2025, what are the three things you would do in the next 90 days?","What is the equivalent 'Amazon algorithm change' that could hit your business — and do you know when it would happen?"]
-  },
-  {
-    color:"#c87a30", tag:"B2B · SaaS",
-    title:"Fieldworx AS",
-    subtitle:"How We Got Crushed by the Wave",
-    sector:"B2B | Workforce Management SaaS",
-    bg:"Nordic B2B SaaS company providing workforce management software to mid-market companies in construction, facilities management, and field services. €28m ARR by 2024, 320 customers, NRR of 108%. Private equity-backed since 2022.\n\nBy 2028, Fieldworx had been sold for €18m — less than half of its 2024 valuation. ARR had fallen to €17m. Churn had risen from 4% to 31% annually.",
-    timeline:[
-      {year:"2024 — A category being rebuilt from scratch",body:"Three AI-native workforce management startups had raised a combined €180m in 2023–2024. Their pitch: replace traditional scheduling and compliance modules with an AI agent that reads contracts, predicts absence, auto-generates compliant rosters, and flags regulatory risk in real time.\n\nAt Fieldworx, the 2025 roadmap focused on UI improvements, a new mobile app, and payroll integrations. One board member asked: \"Have we mapped what AI means for our category?\" The CEO responded they were \"monitoring developments.\"\n\nThe board moved on. The question was not revisited."},
-      {year:"2025 — The first customers start asking questions",body:"Three of Fieldworx's largest customers began asking about AI capabilities during renewal conversations. They had seen demos from a competitor called Autonoma — an AI scheduling agent reducing admin time by 60% in pilots.\n\nThe product team assessed Autonoma: \"Their product is impressive but immature. Our customers won't switch from a proven solution for an unproven one.\"\n\nTwo customers renewed — but negotiated 15% price reductions in exchange for AI features \"within 12 months.\" The third did not renew. The first loss to a direct competitor in four years. The CEO told the board it was an isolated case."},
-      {year:"2026 — The talent and product gap widens",body:"The CTO resigned in February. His exit interview: \"We are building the wrong things. The category is being reinvented and we are optimising the old version. I raised this in three product strategy sessions and was told we needed to focus on what customers are asking for today, not what the market might want in two years.\"\n\nRecruiting a replacement took seven months. Meaningful AI product development did not begin until Q4 2026. Meanwhile, Autonoma and two other competitors had shipped agentic workforce management tools. Fieldworx's NRR fell from 108% to 94%."},
-      {year:"2027 — The churn cascade",body:"Seven enterprise customers — representing €6m in ARR — chose not to renew in Q1. All cited AI capabilities as the primary reason for switching.\n\nThe board hired a strategy consultant. Recommendation: pivot to AI-first, raise a bridge round, pursue DACH expansion.\n\nThe bridge round failed. Investors were unwilling to back a company in active churn without a proven AI product. DACH was cancelled. The company sold for €18m in February 2028."}
-    ],
-    human:[
-      {title:"\"Our customers aren't asking for it\" was a trap.",body:"Fieldworx measured success by what existing customers asked for. But operations managers in construction weren't AI experts. They didn't know what to ask for. By the time they did, a competitor had already shown them."},
-      {title:"The CTO's resignation was the moment that should have changed everything — and didn't.",body:"He left because the leadership culture didn't take his warnings seriously. His exit interview was thorough and specific. It sat in an HR folder, unread by the board."},
-      {title:"The board question in 2024 was the right question — and it was dropped.",body:"One board member tried to open the AI strategy conversation at the right time. The CEO's answer was insufficiently challenged. The board had the information to push harder and didn't."},
-      {title:"Nobody owned AI.",body:"There was no AI lead, no AI roadmap, no dedicated resource. \"Monitoring developments\" meant nobody was responsible for turning that monitoring into action."}
-    ],
-    questions:["The board member who asked about AI in 2024 was right — but dropped it. What should the board have done to ensure it became a standing agenda item?","The CTO raised concerns in three product strategy sessions and was not heard. What does that tell you about the decision-making culture — and whose responsibility was it to fix that?","\"Our customers aren't asking for it\" — is this ever a valid reason not to act on a technology shift? How do you know when to lead your customers versus follow them?","If you were the CEO of Fieldworx in Q2 2025, when the first customers started asking about AI: what decisions would you make, and what would you stop doing to fund them?","What is the equivalent of Autonoma in your market — and what would your customers say if a competitor showed them a demo tomorrow?"]
-  },
-  {
-    color:"#4a9a60", tag:"Decarb · Services",
-    title:"ClearVolt Energy Services",
-    subtitle:"How We Got Crushed by the Wave",
-    sector:"Decarb / CleanTech | Energy Efficiency & Building Decarbonisation",
-    bg:"European provider of energy efficiency and building decarbonisation services for commercial real estate and industrial customers. Founded 2016. Grew to €45m revenue by 2024 with 180 staff across Norway, Germany, and the Netherlands. Private equity-backed since 2023.\n\nBy 2028, acquired in a distressed process for €22m — against a 2024 enterprise value of €40m. Margins had collapsed from 18% to 4%.",
-    timeline:[
-      {year:"2024 — Demand explodes, but so does competition",body:"The market tripled in demand as EU building efficiency regulations tightened and corporate net-zero commitments accelerated. ClearVolt hired aggressively — adding 60 people in 12 months.\n\nWhat the leadership team didn't register: AI-powered energy management platforms from the US and UK were entering the European market. Their model was different: AI analysed building data remotely, generated retrofit recommendations automatically, and monitored performance in real time. Their cost per customer was a fraction of ClearVolt's."},
-      {year:"2025 — Winning on trust, losing on economics",body:"ClearVolt continued to win business — customers valued local expertise and the reassurance of a real person overseeing the work. NPS was 72.\n\nBut large corporate customers were moving toward ongoing \"energy-as-a-service\" contracts with AI platforms. These monitored buildings continuously, flagged issues automatically, and demonstrated ROI in real time through dashboards. ClearVolt's model — project-based, human-led, report-delivered-in-a-PDF — was beginning to look slow and expensive.\n\nThe CEO saw this shift but believed human expertise was irreplaceable. \"You can't automate a conversation with a building manager who's been running the same facility for 20 years.\" No formal response was developed."},
-      {year:"2026 — The pricing pressure begins",body:"In renewal conversations, ClearVolt began facing pricing pressure. Customers were using competitor proposals — from AI platforms offering continuous monitoring for 40% less — as leverage.\n\nGross margin fell from 18% to 11% as ClearVolt reduced prices to retain customers while its cost base remained fixed.\n\nThe board discussed three options and approved a €3.5m technology platform investment — then scaled it back to €1.2m to protect short-term EBITDA. Development began with two engineers."},
-      {year:"2027 — The platform problem",body:"The internal AI platform development stalled. Two engineers were not enough. A well-funded US competitor, GridMind, entered the German market backed by €120m. GridMind signed ClearVolt's three largest German customers — €8m in annual revenue — on multi-year energy-as-a-service contracts.\n\nClearVolt's response was a press release highlighting its \"human-first approach.\" It was not well received.\n\nBy Q4 2027, with margins near zero and no credible technology platform, the board began a sale process. Acquired February 2028.\n\nThe acquiring CEO's assessment: \"They waited too long to change the model, and when they did try, they underinvested by a factor of ten.\""}
-    ],
-    human:[
-      {title:"The CEO's identity was built around human expertise.",body:"She was an energy engineer. She had spent 15 years building credibility in a field that valued credentials and relationships. The idea that AI could replicate what her team did felt both wrong and threatening. Her resistance was not irrational — it was deeply human."},
-      {title:"\"Customers love us\" masked the structural problem.",body:"ClearVolt's NPS was genuinely excellent. But loving your current supplier and choosing a cheaper, faster alternative next year are not mutually exclusive — and NPS doesn't tell you which customers are looking at competitor demos."},
-      {title:"The board approved the right solution at the wrong scale.",body:"The decision to invest in a technology platform was correct. Approving €1.2m instead of €3.5m — to protect short-term EBITDA — was the decision that doomed it. The board was optimising for the wrong time horizon."},
-      {title:"Nobody on the board had technology or AI expertise.",body:"The board was composed of energy industry veterans and financial professionals. When the CTO presented the technology investment case, there was no board member capable of stress-testing the assumptions."}
-    ],
-    questions:["The CEO said \"you can't automate a conversation with a building manager.\" Was she wrong — or right for the wrong reasons? Where does human expertise remain irreplaceable, and where does it become an excuse?","The board approved €1.2m instead of €3.5m. How do leadership teams make better capital allocation decisions when choosing between short-term margin protection and long-term survival?","ClearVolt's regulatory tailwind masked the structural problem. What early warning signals were available — and what would a board have needed to do differently to surface them?","The board had no technology or AI expertise. What does that tell you about board composition in a world where every company is becoming a technology company?","If you were the CEO of ClearVolt in early 2025, having seen the first AI-native competitor enter your market: what is your 12-month plan — and what do you stop doing to fund it?"]
-  }
+  {color:"#00B0B9",tag:"B2C · Online Retail",title:"NordicHome Group",subtitle:"How We Got Crushed by the Wave",
+   bg:"A well-loved Scandinavian online retailer of home interior, lifestyle, and garden products. Founded 2011. Grew to €180m revenue by 2024 across 18 European markets. Private equity-backed since 2021.\n\nBy early 2028, NordicHome was in administration. Revenue had collapsed from €180m to €94m. The team had shrunk from 280 to 90 people.",
+   timeline:[
+     {year:"2024 — Warning signs dismissed",body:"AI-native competitors began emerging offering hyper-personalised recommendations, dynamic pricing undercutting NordicHome by 8–15%, and AI-generated product photography reducing time-to-market from 6 weeks to 48 hours.\n\nThe board's consensus: \"These are startups. They don't have our brand or customer trust. We'll watch and see.\" No formal AI disruption assessment was requested."},
+     {year:"2025 — The data they didn't read",body:"NordicHome's marketplace rankings began declining. Webshop conversion fell from 3.2% to 2.1%. The analytics team flagged this; the marketing director attributed it to \"macro headwinds.\" The report sat unread by the CEO for six weeks.\n\nA competitor launched an AI-powered room planner. NordicHome estimated 18 months and €2m to build something similar. The board approved a scaled-back €400k version. Development began. It was never completed."},
+     {year:"2026 — The talent exodus",body:"The Head of Data resigned: \"We talk about data but don't act on it. The strategy meeting where I showed we were losing share in every age group under 45 — and nothing changed — that was the moment I knew.\"\n\nThree more senior product and tech people left within six months."},
+     {year:"2027–2028 — The tipping point",body:"Amazon delisted two of NordicHome's top-selling categories. Revenue from Amazon — 38% of total sales — dropped 40% in a single quarter.\n\nThe interim CEO described what she found: \"No data infrastructure. The customer database hadn't been updated since 2023. Nobody owned AI. The board had never formally discussed it as a strategic priority.\"\n\nBy Q1 2028, the company entered administration."}
+   ],
+   human:[
+     {title:"The CEO's identity was the brand.",body:"He had built NordicHome on taste and relationships. AI felt like a threat to everything that made the company special. He avoided the topic because engaging with it meant confronting the possibility that what he'd built was becoming obsolete."},
+     {title:"The board asked the wrong questions.",body:"Every meeting focused on revenue, EBITDA, and marketplace rankings. Nobody asked: \"What would our business look like if a well-funded AI-native competitor targeted our exact customer segment next year?\""},
+     {title:"The COO knew, but didn't act.",body:"She saw the data. She had the instinct. But she deferred to the CEO and the culture rewarded loyalty over challenge. She later described it as \"the most expensive silence of my career.\""},
+     {title:"\"Watching and waiting\" felt responsible.",body:"The leadership team weren't reckless — they were cautious. But in a platform shift, caution is itself a decision."}
+   ],
+   questions:["At what point did the leadership team have enough information to act — and what stopped them?","What role did the board play — and what questions were never asked?","The COO saw the risk but stayed silent. What would have needed to be different for her to speak up and be heard?","If you were the CEO of NordicHome in January 2025, what are the three things you do in the next 90 days?","What is the equivalent 'Amazon algorithm change' that could hit your business — and do you know when it would happen?"]},
+  {color:"#c87a30",tag:"B2B · SaaS",title:"Fieldworx AS",subtitle:"How We Got Crushed by the Wave",
+   bg:"Nordic B2B SaaS providing workforce management software to mid-market companies in construction, facilities management, and field services. €28m ARR by 2024, 320 customers, NRR of 108%. Private equity-backed since 2022.\n\nBy 2028, sold for €18m — less than half its 2024 valuation. ARR had fallen to €17m. Churn had risen from 4% to 31% annually.",
+   timeline:[
+     {year:"2024 — A category being rebuilt",body:"Three AI-native workforce management startups raised a combined €180m. Their pitch: replace traditional scheduling and compliance modules with an AI agent that reads contracts, predicts absence, auto-generates compliant rosters, and flags regulatory risk in real time.\n\nAt Fieldworx, the 2025 roadmap focused on UI improvements and payroll integrations. One board member asked about AI. The CEO responded they were \"monitoring developments.\" The question was not revisited."},
+     {year:"2025 — The first customers ask questions",body:"Three large customers asked about AI capabilities during renewals. They had seen demos from competitor Autonoma — an AI scheduling agent reducing admin time by 60% in pilots.\n\nThe product team assessed Autonoma: \"Impressive but immature. Our customers won't switch from a proven solution for an unproven one.\"\n\nTwo renewed — with 15% price reductions and a commitment to AI features \"within 12 months.\" The third did not renew. The first competitive loss in four years."},
+     {year:"2026 — The talent and product gap widens",body:"The CTO resigned. His exit interview: \"We are building the wrong things. The category is being reinvented and we are optimising the old version. I raised this in three product strategy sessions and was told to focus on what customers are asking for today.\"\n\nRecruiting a replacement took seven months. Meaningful AI development did not begin until Q4 2026."},
+     {year:"2027–2028 — The churn cascade",body:"Seven enterprise customers — €6m ARR — chose not to renew in Q1 2027, all citing AI capabilities. A bridge round failed. DACH expansion was cancelled. The company sold for €18m in February 2028."}
+   ],
+   human:[
+     {title:"\"Our customers aren't asking for it\" was a trap.",body:"Fieldworx measured success by what existing customers asked for. But operations managers in construction weren't AI experts. They didn't know what to ask for. By the time they did, a competitor had already shown them."},
+     {title:"The CTO's resignation was the moment that should have changed everything.",body:"He left because the leadership culture didn't take his warnings seriously. His exit interview was thorough and specific. It sat in an HR folder, unread by the board."},
+     {title:"The board question in 2024 was the right question — and it was dropped.",body:"One board member tried to open the AI strategy conversation at the right time. The CEO's answer was insufficiently challenged. The board had the information to push harder and didn't."},
+     {title:"Nobody owned AI.",body:"There was no AI lead, no AI roadmap, no dedicated resource. \"Monitoring developments\" meant nobody was responsible for turning that monitoring into action."}
+   ],
+   questions:["The board member who asked about AI in 2024 was right — but dropped it. What should the board have done?","The CTO raised concerns three times and was not heard. What does that tell you about the decision-making culture?","\"Our customers aren't asking for it\" — is this ever a valid reason not to act on a technology shift?","If you were the CEO in Q2 2025 when the first customers started asking about AI: what decisions do you make, and what do you stop doing to fund them?","What is the equivalent of Autonoma in your market — and what would your customers say if a competitor showed them a demo tomorrow?"]},
+  {color:"#4a9a60",tag:"Decarb · Services",title:"ClearVolt Energy Services",subtitle:"How We Got Crushed by the Wave",
+   bg:"European provider of energy efficiency and building decarbonisation services. Founded 2016. Grew to €45m revenue by 2024 with 180 staff across Norway, Germany, and the Netherlands. Private equity-backed since 2023.\n\nBy 2028, acquired in a distressed process for €22m — against a 2024 enterprise value of €40m. Margins had collapsed from 18% to 4%.",
+   timeline:[
+     {year:"2024 — Demand explodes, competition changes shape",body:"EU regulations tightened. ClearVolt hired aggressively — 60 people in 12 months.\n\nWhat they didn't register: AI-powered energy management platforms from the US and UK were entering Europe. Their model was different — AI analysed building data remotely, generated retrofit recommendations automatically, and monitored performance in real time. Their cost per customer was a fraction of ClearVolt's."},
+     {year:"2025 — Winning on trust, losing on economics",body:"ClearVolt continued to win business. NPS was 72. But large corporate customers were moving toward \"energy-as-a-service\" contracts with AI platforms — continuous monitoring, automatic flagging, real-time ROI dashboards. ClearVolt's model — project-based, human-led, report-in-a-PDF — was beginning to look slow and expensive.\n\nThe CEO believed human expertise was irreplaceable: \"You can't automate a conversation with a building manager who's run the same facility for 20 years.\" No formal response was developed."},
+     {year:"2026 — The pricing pressure begins",body:"Customers used competitor proposals — AI platforms offering continuous monitoring for 40% less — as leverage. Gross margin fell from 18% to 11%.\n\nThe board approved a €3.5m technology platform investment — then scaled it back to €1.2m to protect short-term EBITDA. Development began with two engineers."},
+     {year:"2027–2028 — The platform problem",body:"The build stalled. GridMind, a US competitor backed by €120m, entered Germany and signed ClearVolt's three largest German customers — €8m ARR — on multi-year contracts.\n\nClearVolt's response was a press release about its \"human-first approach.\" It was not well received.\n\nAcquired February 2028. Acquiring CEO: \"They waited too long to change the model, and when they did try, they underinvested by a factor of ten.\""}
+   ],
+   human:[
+     {title:"The CEO's identity was built around human expertise.",body:"She was an energy engineer. The idea that AI could replicate what her team did felt both wrong and threatening. Her resistance was not irrational — it was deeply human."},
+     {title:"\"Customers love us\" masked the structural problem.",body:"ClearVolt's NPS was genuinely excellent. But loving your current supplier and choosing a cheaper, faster alternative next year are not mutually exclusive — and NPS doesn't tell you which customers are looking at competitor demos."},
+     {title:"The board approved the right solution at the wrong scale.",body:"Approving €1.2m instead of €3.5m — to protect short-term EBITDA — was the decision that doomed it. The board was optimising for the wrong time horizon."},
+     {title:"Nobody on the board had technology or AI expertise.",body:"When the CTO presented the investment case, there was no board member capable of stress-testing the assumptions. The decision was made on financial grounds alone."}
+   ],
+   questions:["The CEO said \"you can't automate a conversation with a building manager.\" Was she wrong — or right for the wrong reasons?","The board approved €1.2m instead of €3.5m. How do leadership teams make better capital allocation decisions when choosing between short-term margin and long-term survival?","ClearVolt's regulatory tailwind masked the structural problem. What early warning signals were available — and what would a board have needed to do differently to surface them?","The board had no technology or AI expertise. What does that tell you about board composition in a world where every company is becoming a technology company?","If you were the CEO of ClearVolt in early 2025, having seen the first AI-native competitor enter your market: what is your 12-month plan — and what do you stop doing to fund it?"]}
 ];
 
 /* ── PAGE NAV ── */
-function showPage(id){
+function showPage(id,btn){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
-  event.target.classList.add('active');
-  // reset case view
+  btn.classList.add('active');
   document.getElementById('cases-list').style.display='block';
   document.getElementById('case-detail').classList.remove('open');
   window.scrollTo(0,0);
@@ -537,28 +616,50 @@ function buildTimeline(){
   sessions.forEach((s,i)=>{
     const row=document.createElement('div');
     if(s.isBreak){
-      row.className='row break-row';
-      row.innerHTML=`<div class="time-col"><span class="time-label">${s.time}</span></div><div class="dot-col"><div class="dot sm"></div></div><div class="break-lbl">${s.icon} ${s.title}${s.dur?' · '+s.dur:''}</div>`;
+      row.className='row br';
+      row.innerHTML=`<div class="tc"><span class="tlabel">${s.time}</span></div><div class="dc"><div class="dot sm"></div></div><div class="br-lbl">${s.icon} ${s.title}${s.dur?' · '+s.dur:''}</div>`;
     } else {
       row.className='row';
-      const bc=s.color==='#0f2a3f'?'#5a9aaa':(s.isEvening?GOLD:s.color);
-      row.innerHTML=`
-        <div class="time-col"><span class="time-label">${s.time}</span></div>
-        <div class="dot-col"><div class="dot" style="background:${s.color};box-shadow:0 0 8px ${s.color}55;"></div></div>
-        <div class="card" onclick="openModal(${i})" style="border-left:3px solid ${s.color};">
-          <div class="card-row">
-            <div>
-              <div class="card-title-row">
-                <span class="card-icon">${s.icon}</span>
-                <span class="card-title">${s.title}</span>
-                ${s.dur?`<span class="dur-badge" style="background:${s.color}28;color:${bc};">${s.dur}</span>`:''}
-                ${s.isOptions?`<span class="dur-badge" style="background:rgba(255,255,255,0.07);color:#667;">3 options</span>`:''}
-              </div>
-              <div class="card-spk">${s.speakers}</div>
-              <div class="card-tag">${s.tag}</div>
+      const bc=s.color===DARK?'#6aaab5':(s.isEvening?GOLD:s.color);
+      const splitHtml=s.isSplit?`
+        <div class="split-box">
+          <div class="split-title">⚡ Parallel Group Rotation — Hackathon Moderators Can Cover Both</div>
+          <div class="split-grid">
+            <div class="split-col">
+              <div class="split-col-title">Group A · 12:30–14:00</div>
+              <div class="split-item"><span>12:30–14:00</span> Hackathon: Build Your AI Tool</div>
+              <div class="split-item"><span>14:00–14:20</span> Break</div>
+              <div class="split-item"><span>14:20–15:35</span> Deep Dive (Option A, B or C)</div>
             </div>
-            <div class="arrow">›</div>
+            <div class="split-col">
+              <div class="split-col-title">Group B · 12:30–14:00</div>
+              <div class="split-item"><span>12:30–14:00</span> Deep Dive (Option A, B or C)</div>
+              <div class="split-item"><span>14:00–14:20</span> Break</div>
+              <div class="split-item"><span>14:20–15:35</span> Hackathon: Build Your AI Tool</div>
+            </div>
           </div>
+          <div class="mod-box">
+            <div class="mod-title">Hackathon Moderators</div>
+            <div class="mod-names">Ellen Nyhus · Caroline Ohlsson · Sascha Alber · Nils Vold · Pål · Mike Anjard-Hummel · Morten Reinhardtsen · Ellen Köhler · Daniel Hansen · Erik Nordlie · Nikolaj Hamann · Kristofer Gravning · BonsaiLabs</div>
+          </div>
+        </div>`:'';
+      row.innerHTML=`
+        <div class="tc"><span class="tlabel">${s.time}</span></div>
+        <div class="dc"><div class="dot" style="background:${s.color};box-shadow:0 0 8px ${s.color}55;"></div></div>
+        <div class="card" onclick="openModal(${i})" style="border-left:3px solid ${s.color};">
+          <div class="cr">
+            <div>
+              <div class="ctr">
+                <span class="ci">${s.icon}</span>
+                <span class="ct">${s.title}</span>
+                ${s.dur?`<span class="db" style="background:${s.color}28;color:${bc};">${s.dur}</span>`:''}
+              </div>
+              <div class="cs">${s.speakers}</div>
+              <div class="ctag">${s.tag}</div>
+            </div>
+            <div class="arr">›</div>
+          </div>
+          ${splitHtml}
         </div>`;
     }
     tl.appendChild(row);
@@ -567,46 +668,26 @@ function buildTimeline(){
 
 /* ── MODAL ── */
 let activeOpt=0;
-function openModal(i){
-  activeOpt=0;
-  renderModal(i);
-  document.getElementById('modalBg').classList.add('open');
-}
+function openModal(i){activeOpt=0;renderModal(i);document.getElementById('modalBg').classList.add('open');}
 function renderModal(i){
   const s=sessions[i];
   const mb=document.getElementById('modalBody');
   mb.dataset.idx=i;
-  const ec=s.color==='#0f2a3f'?'#6aaab5':(s.isEvening?GOLD:s.color);
-  let tabs='',content='';
-  if(s.isOptions){
-    tabs=`<div class="opt-tabs">${s.options.map((o,oi)=>`<button class="opt-tab${oi===activeOpt?' active':''}" onclick="switchOpt(${oi},${i},event)">${o.label}</button>`).join('')}</div>`;
-    const o=s.options[activeOpt];
-    content=`<div style="font-size:16px;font-weight:700;margin-bottom:5px;">${o.title}</div><div style="font-size:11px;color:#556;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;">${o.fac}</div><div class="m-desc">${o.desc}</div>${o.purpose?`<div class="m-pur" style="background:${ec}14;border-left:3px solid ${ec};"><div class="m-pur-lbl" style="color:${ec};">Intended Purpose</div><div class="m-pur-txt">${o.purpose}</div></div>`:''}`;
-  } else {
-    content=`<div class="m-desc">${s.desc}</div>${s.purpose?`<div class="m-pur" style="background:${ec}14;border-left:3px solid ${ec};"><div class="m-pur-lbl" style="color:${ec};">Intended Purpose</div><div class="m-pur-txt">${s.purpose}</div></div>`:''}`;
-  }
-  mb.innerHTML=`<div class="m-eye" style="color:${ec};">${s.time}${s.dur?' · '+s.dur:''}</div><div class="m-title">${s.icon} ${s.title}</div><div class="m-spk">${s.speakers}</div><div class="m-tag">${s.tag}</div>${tabs}${content}`;
+  const ec=s.color===DARK?'#6aaab5':(s.isEvening?GOLD:s.color);
+  mb.innerHTML=`<div class="m-eye" style="color:${ec};">${s.time}${s.dur?' · '+s.dur:''}</div><div class="m-title">${s.icon} ${s.title}</div><div class="m-spk">${s.speakers}</div><div class="m-tag">${s.tag}</div><div class="m-desc">${s.desc}</div>${s.purpose?`<div class="m-pur" style="background:${ec}14;border-left:3px solid ${ec};"><div class="m-pur-lbl" style="color:${ec};">Intended Purpose</div><div class="m-pur-txt">${s.purpose}</div></div>`:''}`;
 }
-function switchOpt(oi,i,e){e.stopPropagation();activeOpt=oi;renderModal(i);}
 function closeMBg(e){if(e.target===document.getElementById('modalBg'))closeModal();}
 function closeModal(){document.getElementById('modalBg').classList.remove('open');}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 
-/* ── CASE STUDIES ── */
+/* ── CASES ── */
 function openCase(i){
   const c=cases[i];
   const el=document.getElementById('case-content');
-  let tlHtml=c.timeline.map(t=>`<div class="timeline-event" style="border-color:${c.color};"><div class="te-year" style="color:${c.color};">${t.year}</div><div class="te-body">${t.body}</div></div>`).join('');
-  let huHtml=c.human.map(h=>`<div class="human-box"><div class="human-box-title">${h.title}</div><div class="human-box-body">${h.body}</div></div>`).join('');
-  let qHtml=c.questions.map((q,qi)=>`<div class="q-item"><span class="q-num">${qi+1}.</span>${q}</div>`).join('');
-  el.innerHTML=`
-    <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:${c.color};margin-bottom:8px;">${c.tag} · Post Mortem 2028</div>
-    <div style="font-size:30px;font-weight:800;margin-bottom:4px;">${c.title}</div>
-    <div style="font-size:15px;color:#7a9aa0;margin-bottom:24px;font-style:italic;">${c.subtitle}</div>
-    <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:#a0bcc0;line-height:1.75;white-space:pre-line;border-left:3px solid ${c.color};">${c.bg}</div>
-    <div class="case-section"><div class="case-h2">The Timeline: What Happened</div>${tlHtml}</div>
-    <div class="case-section"><div class="case-h2">The Human Dimension: What Made This Hard to See</div>${huHtml}</div>
-    <div class="case-section"><div class="case-h2">Discussion Questions</div><div style="font-size:12px;color:#5a7a80;margin-bottom:14px;font-style:italic;">You are the leadership team in 2024. Looking back from 2028, what would you do differently?</div>${qHtml}</div>`;
+  const tlHtml=c.timeline.map(t=>`<div class="te" style="background:rgba(255,255,255,0.03);border-left:3px solid ${c.color};"><div class="te-y" style="color:${c.color};">${t.year}</div><div class="te-b">${t.body}</div></div>`).join('');
+  const huHtml=c.human.map(h=>`<div class="hbox"><div class="hbox-t">${h.title}</div><div class="hbox-b">${h.body}</div></div>`).join('');
+  const qHtml=c.questions.map((q,qi)=>`<div class="qi"><span class="qn">${qi+1}.</span>${q}</div>`).join('');
+  el.innerHTML=`<div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:${c.color};margin-bottom:8px;">${c.tag} · Post Mortem 2028</div><div style="font-size:28px;font-weight:800;margin-bottom:4px;">${c.title}</div><div style="font-size:14px;color:#7a9aa0;margin-bottom:22px;font-style:italic;">${c.subtitle}</div><div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:#a0bcc0;line-height:1.75;white-space:pre-line;border-left:3px solid ${c.color};">${c.bg}</div><div style="margin-bottom:26px;"><div class="ch2">The Timeline: What Happened</div>${tlHtml}</div><div style="margin-bottom:26px;"><div class="ch2">The Human Dimension: What Made This Hard to See</div>${huHtml}</div><div><div class="ch2">Discussion Questions</div><div style="font-size:12px;color:#5a7a80;margin-bottom:12px;font-style:italic;">You are the leadership team in 2024. Looking back from 2028, what would you do differently?</div>${qHtml}</div>`;
   document.getElementById('cases-list').style.display='none';
   document.getElementById('case-detail').classList.add('open');
   window.scrollTo(0,0);
